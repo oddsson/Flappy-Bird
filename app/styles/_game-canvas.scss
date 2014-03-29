@@ -21,12 +21,12 @@
     overflow: hidden;
 
     // Some graphics
-    background: red;
+    background-image: url('../images/background-city.PNG');
 }
 
-.Ground {
-	margin-top: em(577px);
-	background-image: url('../images/ground.PNG');
+.Ground-moving {
+	margin-top: em(490px);
+	background-image: url('../images/ground-moving.PNG');
 	width: em(550px);
 	height: em(23px);
 	position: absolute;
@@ -38,4 +38,11 @@
 {
 	from   {left:0px; top:0px;}
 	to {left: -50px;}
+}
+
+.Ground-static {
+	background-image: url('../images/ground-static.PNG');
+	margin-top: em(513px);
+	width: em(500px);
+	height: em(87px);
 }
