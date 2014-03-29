@@ -30,13 +30,12 @@
 	width: em(550px);
 	height: em(23px);
 	position: absolute;
-	/*transform: translate(em(-50px), 0);
-	transition: transform 1s;*/
+
 	animation: scrolling 0.5s linear infinite running;
 }
 @keyframes scrolling
 {
-	from   {left:0px; top:0px;}
+	from {left:0px; top:0px;}
 	to {left: -50px;}
 }
 

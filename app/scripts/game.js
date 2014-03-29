@@ -80,7 +80,7 @@ window.Game = (function() {
 	 * Some shared constants.
 	 */
 	Game.prototype.WORLD_WIDTH = 50;
-	Game.prototype.WORLD_HEIGHT = 49.3;
+	Game.prototype.WORLD_HEIGHT = 51.3;
 
 	return Game;
 })();
