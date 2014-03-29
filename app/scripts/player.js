@@ -26,7 +26,7 @@ window.Player = (function() {
 	};
 
 	Player.prototype.onFrame = function(delta) {
-		if (Controls.keys.right) {
+		/*if (Controls.keys.right) {
 			this.pos.x += delta * SPEED;
 		}
 		if (Controls.keys.left) {
@@ -36,6 +36,10 @@ window.Player = (function() {
 			this.pos.y += delta * SPEED;
 		}
 		if (Controls.keys.up) {
+			this.pos.y -= delta * SPEED;
+		}*/
+
+		if(Controls.keys.space) {
 			this.pos.y -= delta * SPEED;
 		}
 
