@@ -8,11 +8,13 @@
 	margin-left: em(-200px);
 	box-sizing: border-box;
 
-	background: purple;
+	box-shadow: 0px 3px 15px 0px rgba(50, 50, 50, 0.75);
+	border-radius: 5px;
+	background: #DED895;
 	text-align: center;
 
 	// Keep it off-screen
-	transform: translate(0, em(-400px));
+	transform: translate(0, em(-410px));
 	transition: transform 0.5s;
 }
 
@@ -23,19 +25,31 @@
 	transform: none;
 }
 
-.Scoreboard-restart {
-	margin-top: em(200px);
+.Scoreboard-game-over {
+	display: block;
+	margin-top: em(50px);
+    margin-left: auto;
+    margin-right: auto;
+	border: none;
+	width: em(197px);
+    height: em(51px);
+	background-image: url('../images/game-over.PNG');
+}
 
+.Scoreboard-restart {
+	margin-top: em(100px);
 	font-size: inherit;
 	padding: em(4px) em(15px);
-	border: em(2px) solid white;
-	background: none;
+	border: none;
+	width: em(206px);
+    height: em(72px);
+	background-image: url('../images/restart.PNG');
+	transform: scale(.6,.6);
 	cursor: pointer;
 }
 
-.Scoreboard-restartText {
-	// NOTICE: You'll lose 10% of your score if you don't change this style!
+/*.Scoreboard-restartText {
 	font-family: 'Helvetica', serif;
 	font-size: em(24px);
 	color: white;
-}
+}*/

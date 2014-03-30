@@ -5,7 +5,7 @@
     // Design everything with a nice em of 10px.
     font-size: $base-font-size;
 
-    // Create a 1024x576 pixel canvas.
+    // Create a 500x600  pixel canvas.
     // If everything is defined in em's, you can resize
     // the whole game just by changing the font-size above
     // with javascript.
@@ -16,7 +16,7 @@
     height: em(600px);
     margin-left: (em(-500px) / 2);
     margin-top: (em(-600px) / 2);
-
+    box-shadow: 0px 3px 15px 0px rgba(50, 50, 50, 0.75);
     // Don't draw outside this box.
     overflow: hidden;
 
