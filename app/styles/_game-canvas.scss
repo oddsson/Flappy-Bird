@@ -12,14 +12,36 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    width: em(1024px);
-    height: em(576px);
-    margin-left: (em(-1024px) / 2);
-    margin-top: (em(-576px) / 2);
+    width: em(500px);
+    height: em(600px);
+    margin-left: (em(-500px) / 2);
+    margin-top: (em(-600px) / 2);
 
     // Don't draw outside this box.
     overflow: hidden;
 
     // Some graphics
-    background: red;
+    background-image: url('../images/background-city.PNG');
+}
+
+.Ground-moving {
+	margin-top: em(490px);
+	background-image: url('../images/ground-moving.PNG');
+	width: em(550px);
+	height: em(23px);
+	position: absolute;
+
+	animation: scrolling 0.5s linear infinite running;
+}
+@keyframes scrolling
+{
+	from {left:0px; top:0px;}
+	to {left: -50px;}
+}
+
+.Ground-static {
+	background-image: url('../images/ground-static.PNG');
+	margin-top: em(513px);
+	width: em(500px);
+	height: em(87px);
 }

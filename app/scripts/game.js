@@ -25,7 +25,8 @@ window.Game = (function() {
 		if (!this.isPlaying) {
 			return;
 		}
-
+		//var groundEl = this.el.find('.Ground');
+		
 		// Calculate how long since last frame in seconds.
 		var now = +new Date() / 1000,
 				delta = now - this.lastFrame;
@@ -78,8 +79,8 @@ window.Game = (function() {
 	/**
 	 * Some shared constants.
 	 */
-	Game.prototype.WORLD_WIDTH = 102.4;
-	Game.prototype.WORLD_HEIGHT = 57.6;
+	Game.prototype.WORLD_WIDTH = 50;
+	Game.prototype.WORLD_HEIGHT = 51.3;
 
 	return Game;
 })();
