@@ -24,6 +24,11 @@
     background-image: url('../images/background-city.PNG');
 }
 
+@keyframes scrolling-back
+{
+	from {left:0px; top:0px;}
+	to {left: -50px;}
+}
 .Ground-moving {
 	margin-top: em(490px);
 	background-image: url('../images/ground-moving.PNG');
@@ -33,6 +38,7 @@
 
 	animation: scrolling 0.5s linear infinite running;
 }
+
 @keyframes scrolling
 {
 	from {left:0px; top:0px;}
@@ -52,6 +58,7 @@
 	width: em(98px);
 	height: em(41px);
 	margin-top: em(100px);
+	transform: scale(1.5,1.5);
 	animation: cloud-scrolling 20s linear infinite running;
 }
 
@@ -70,6 +77,7 @@
 	width: em(98px);
 	height: em(41px);
 	margin-top: em(200px);
+	transform: scale(.5,.5);
 	animation: cloud-scrolling 40s linear infinite running;
 }
 
