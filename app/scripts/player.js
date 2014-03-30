@@ -29,7 +29,7 @@ window.Player = (function() {
 	Player.prototype.onFrame = function(delta) {
 		if(Controls.keys.space) {
 			this.pos.y -= delta * GRAVITY;
-			this.el.css('transform', 'rotate(30deg)');
+			//this.el.css('transform', 'rotate( 30deg)');
 		}
 		else {
 			this.pos.y += delta * SPEED;
