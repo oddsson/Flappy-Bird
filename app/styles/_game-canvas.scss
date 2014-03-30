@@ -45,3 +45,37 @@
 	width: em(500px);
 	height: em(87px);
 }
+
+.x1 {
+	position: absolute;
+	background-image: url('../images/cloud-moving.PNG');
+	width: em(98px);
+	height: em(41px);
+	margin-top: em(100px);
+	animation: cloud-scrolling 20s linear infinite running;
+}
+
+.x2 {
+	position: absolute;
+	background-image: url('../images/cloud-moving.PNG');
+	width: em(98px);
+	height: em(41px);
+	margin-top: em(50px);
+	animation: cloud-scrolling 30s linear infinite running;
+}
+
+.x3 {
+	position: absolute;
+	background-image: url('../images/cloud-moving.PNG');
+	width: em(98px);
+	height: em(41px);
+	margin-top: em(200px);
+	animation: cloud-scrolling 40s linear infinite running;
+}
+
+@keyframes cloud-scrolling
+{
+	from {left:500px; top:3px;}
+	to {left: -300px; top: 70px;}
+}
+

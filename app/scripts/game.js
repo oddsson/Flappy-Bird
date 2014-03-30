@@ -25,7 +25,6 @@ window.Game = (function() {
 		if (!this.isPlaying) {
 			return;
 		}
-		//var groundEl = this.el.find('.Ground');
 		
 		// Calculate how long since last frame in seconds.
 		var now = +new Date() / 1000,
