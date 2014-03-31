@@ -31,6 +31,9 @@ window.Game = (function() {
 				delta = now - this.lastFrame;
 		this.lastFrame = now;
 
+
+		//var newpipe = $('<div class="pipes-animated"><div class="pipe_upper" style="height: ' + 100 + 'px;"></div><div class="pipe_lower" style="height: ' + 200 + 'px;"></div></div>');
+		//$('.pipes').append(newpipe);
 		// Update game entities.
 		this.player.onFrame(delta);
 
@@ -43,6 +46,12 @@ window.Game = (function() {
 	 */
 	Game.prototype.start = function() {
 		this.reset();
+		var bottomHeight = Math.floor(Math.random() * 600 + 0);
+		console.log(bottomHeight);
+		/*var pipeBelow = $('<div class="pipe_upper" style="height: em(' + bottomHeight + 'px);">></div>');
+		var pipeAbove = $('<div class="pipe_lower" style="height: em(' + bottomHeight + 'px);"></div>');
+		$('.pipes').append(pipeBelow);
+		$('.pipes').append(pipeAbove);*/
 
 		// Restart the onFrame loop
 		this.lastFrame = +new Date() / 1000;

@@ -3,9 +3,22 @@
     /* Absolutely position entities at 0,0 and use transform to 
     move it around.*/
     position: absolute;
+    overflow: hidden;
     top: 0;
     left: 0;
+    background-position: 0px 0px;
     width: em(34px);
     height: em(24px);
-    background-image: url('../images/flappy-bird.gif');
+}
+
+.Player .Player-Sprite {
+	background-image: url('../images/flappy-bird.png');
+	width: em(104px);
+    height: em(24px);
+    animation: flap .3s steps(3, end) infinite;
+}
+
+@keyframes flap {
+    from { background-position: 0px; }
+    to { background-position: -104px; }
 }

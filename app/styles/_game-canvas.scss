@@ -82,3 +82,27 @@
 	to {left: -300px; top: 70px;}
 }
 
+/*.pipe_upper {
+	position: absolute;
+	background-image: url('../images/pipe-above.PNG');
+	width: em(52px);
+	height: em(320px);
+	margin-top: em(-200px);
+	animation: scrolling-pipe 10s linear infinite running;
+}
+
+.pipe_lower {
+	position: absolute;
+	background-image: url('../images/pipe-below.PNG');
+	width: em(52px);
+	height: em(320px);
+	margin-top: em(200px);
+	animation: scrolling-pipe 10s linear infinite running;
+}
+
+@keyframes scrolling-pipe
+{
+	from {left:500px; top:100px;}
+	to {left: -500px;}
+}
+*/
