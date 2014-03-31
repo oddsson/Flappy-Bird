@@ -15,10 +15,10 @@
 	background-image: url('../images/flappy-bird.png');
 	width: em(104px);
     height: em(24px);
-    animation: flap .3s steps(3, end) infinite;
+    animation: flap .2s steps(3, end) infinite;
 }
 
 @keyframes flap {
-    from { background-position: 0px; }
-    to { background-position: -104px; }
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(-104px, 0, 0); }
 }
