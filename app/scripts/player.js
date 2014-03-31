@@ -5,7 +5,7 @@ window.Player = (function() {
 
 	// All these constants are in em's, multiply by 10 pixels
 	// for 1024x576px canvas.
-	var SPEED = 20; // * 10 pixels per second
+	//var SPEED = 20; // * 10 pixels per second
 	var GRAVITY = 170;
 	var JUMP_VELOCITY = 50;
 	var WIDTH = 5;
@@ -43,7 +43,6 @@ window.Player = (function() {
 		
 		// Update UI
 		this.el.css('transform', 'translate(' + this.pos.x + 'em, ' + this.pos.y + 'em)');
-		//this.el.css('transform(rotate('-180'deg)');
 	};
 
 	Player.prototype.checkCollisionWithBounds = function() {

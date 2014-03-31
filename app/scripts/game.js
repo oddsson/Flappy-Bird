@@ -62,7 +62,7 @@ window.Game = (function() {
 	 */
 	Game.prototype.gameover = function() {
 		this.isPlaying = false;
-
+		
 		// Should be refactored into a Scoreboard class.
 		var that = this;
 		var scoreboardEl = this.el.find('.Scoreboard');
