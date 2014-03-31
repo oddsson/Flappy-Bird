@@ -6,7 +6,8 @@ window.Player = (function() {
 	// All these constants are in em's, multiply by 10 pixels
 	// for 1024x576px canvas.
 	var SPEED = 20; // * 10 pixels per second
-	var GRAVITY = 80;
+	var GRAVITY = 170;
+	var JUMP_VELOCITY = 50;
 	var WIDTH = 5;
 	var HEIGHT = 5;
 	var INITIAL_POSITION_X = 15;
@@ -24,26 +25,26 @@ window.Player = (function() {
 	Player.prototype.reset = function() {
 		this.pos.x = INITIAL_POSITION_X;
 		this.pos.y = INITIAL_POSITION_Y;
+		this.vel = { x: 0, y: 0 };
 	};
 
 	Player.prototype.onFrame = function(delta) {
+		// If jumping
 		if(Controls.keys.space) {
-			this.pos.y -= delta * GRAVITY;
-			//this.el.css('transform', 'rotate( 30deg)');
+			this.vel.y = -JUMP_VELOCITY;
 		}
-		else {
-			this.pos.y += delta * SPEED;
-		}
-		
-		this.checkCollisionWithBounds();
 
+		// Gravity
+		this.vel.y += GRAVITY * delta;
+		this.pos.y += delta * this.vel.y;
+		
+		// Collision check
+		this.checkCollisionWithBounds();
+		
 		// Update UI
 		this.el.css('transform', 'translate(' + this.pos.x + 'em, ' + this.pos.y + 'em)');
+		//this.el.css('transform(rotate('-180'deg)');
 	};
-
-	/*Player.prototype.jump = function(){
-		this.body.velocity.y = -10;
-	};*/
 
 	Player.prototype.checkCollisionWithBounds = function() {
 		if (this.pos.x < 0 ||
