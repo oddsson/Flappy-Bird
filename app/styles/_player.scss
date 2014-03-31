@@ -13,12 +13,12 @@
 
 .Player .Player-Sprite {
 	background-image: url('../images/flappy-bird.png');
-	width: em(104px);
+	width: em(102px);
     height: em(24px);
-    animation: flap .2s steps(3, end) infinite;
+    animation: flap .3s steps(3, end) infinite;
 }
 
 @keyframes flap {
     from { transform: translate3d(0, 0, 0); }
-    to { transform: translate3d(-104px, 0, 0); }
+    to { transform: translate3d(-102px, 0, 0); }
 }
