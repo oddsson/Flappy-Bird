@@ -79,8 +79,8 @@
 
 @keyframes cloud-scrolling
 {
-	from { transform: translate3d(500px, -3px, 0); }
-	to { transform: translate3d(-300px, 70px, 0); }
+	from { transform: translate3d(500px, -3px, 0); opacity: 0.5; }
+	to { transform: translate3d(-300px, 70px, 0); opacity: 0.1;}
 }
 
 .audio {
