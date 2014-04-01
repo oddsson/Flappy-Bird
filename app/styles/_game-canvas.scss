@@ -31,7 +31,7 @@
 	height: em(23px);
 	position: absolute;
 
-	animation: scrolling 0.5s linear infinite running;
+	animation: scrolling 0.45s linear infinite running;
 }
 
 @keyframes scrolling
@@ -91,25 +91,27 @@
 
 .pipe_upper {
 	position: absolute;
+	visibility: hidden;
 	top: 0%;
 	background-image: url('../images/pipe-above.PNG');
 	background-position: bottom left;
 	width: em(52px);
-	animation: scrolling-pipe 10s linear infinite running;
+	animation: scrolling-pipe 5s linear 1 running;
 }
 
 .pipe_lower {
 	position: absolute;
+	visibility: hidden;
 	bottom: 0%;
 	background-image: url('../images/pipe-below.PNG');
 	width: em(52px);
-	animation: scrolling-pipe 10s linear infinite running;
+	animation: scrolling-pipe 5s linear 1 running;
 }
 
 @keyframes scrolling-pipe
 {
-	from { transform: translate3d(500px, 0, 0); }
-	to { transform: translate3d(-500px, 0, 0); }
+	from { transform: translate3d(500px, 0, 0); visibility: visible}
+	to { transform: translate3d(-52px, 0, 0); visibility: hidden;}
 }
 
 

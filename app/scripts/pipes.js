@@ -6,6 +6,10 @@ window.Pipes = (function() {
 		this.game = game;
 	};
 
+	/*Pipes.prototype.onFrame = function() {
+
+	};*/
+
 	Pipes.prototype.drawPipes = function() {
 		setInterval(function(){
 			var WORLD_HEIGHT = 51.3;
@@ -17,7 +21,7 @@ window.Pipes = (function() {
 			var pipeAbove = $('<div class="pipe_upper" style="height:' + upperHeight + 'px;"></div>');
 			$('.Pipes').append(pipeBelow);
 			$('.Pipes').append(pipeAbove);
-		},4000);
+		},2000);
 	};
 	return Pipes;
 })();

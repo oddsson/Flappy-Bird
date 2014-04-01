@@ -42,10 +42,6 @@ window.Game = (function() {
 	 */
 	Game.prototype.start = function() {
 		this.reset();
-		
-		//TEST
-		//setInterval(this.pipes.onFrame(),3000);
-		//TEST
 		this.pipes.drawPipes();
 		// Restart the onFrame loop
 		this.lastFrame = +new Date() / 1000;
