@@ -46,8 +46,10 @@ window.Game = (function() {
 	 */
 	Game.prototype.start = function() {
 		this.reset();
+
 		var bottomHeight = Math.floor(Math.random() * (400 - 300)) + 300;
 		var upperHeight = bottomHeight - 300;
+
 		console.log(bottomHeight);
 		var pipeBelow = $('<div class="pipe_lower" style="margin-top:' + bottomHeight + 'px;">></div>');
 		var pipeAbove = $('<div class="pipe_upper" style="margin-top:' + upperHeight + 'px;"></div>');
