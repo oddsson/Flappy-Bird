@@ -46,6 +46,7 @@ window.Game = (function() {
 	 */
 	Game.prototype.start = function() {
 		this.reset();
+
 		var bottomHeight = Math.floor(Math.random() * 600 + 0);
 		console.log(bottomHeight);
 		/*var pipeBelow = $('<div class="pipe_upper" style="height: em(' + bottomHeight + 'px);">></div>');
