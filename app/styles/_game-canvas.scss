@@ -41,6 +41,7 @@
 }
 
 .Ground-static {
+	position: absolute;
 	background-image: url('../images/ground-static.PNG');
 	margin-top: em(513px);
 	width: em(500px);
@@ -53,7 +54,7 @@
 	width: em(98px);
 	height: em(41px);
 	margin-top: em(100px);
-	transform: scale(1.5,1.5);
+	/*transform: scale(2,2);*/
 	animation: cloud-scrolling 20s linear infinite running;
 }
 
@@ -72,7 +73,7 @@
 	width: em(98px);
 	height: em(41px);
 	margin-top: em(200px);
-	transform: scale(.5,.5);
+	/*transform: scale3d(0.5, 0.5, 0.5);*/
 	animation: cloud-scrolling 40s linear infinite running;
 }
 

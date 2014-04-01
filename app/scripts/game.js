@@ -26,17 +26,13 @@ window.Game = (function() {
 		if (!this.isPlaying) {
 			return;
 		}
-		
 		// Calculate how long since last frame in seconds.
 		var now = +new Date() / 1000,
 				delta = now - this.lastFrame;
 		this.lastFrame = now;
-
-
 		// Update game entities.
 		this.player.onFrame(delta);
-		//this.pipes.onFrame();
-
+		//this.pipes.onFrame(delta);
 		// Request next frame.
 		window.requestAnimationFrame(this.onFrame);
 	};
@@ -47,10 +43,10 @@ window.Game = (function() {
 	Game.prototype.start = function() {
 		this.reset();
 		
-		// TEMPORARY
-		this.pipes.onFrame();
-		// TEMPORARY
-
+		//TEST
+		//setInterval(this.pipes.onFrame(),3000);
+		//TEST
+		this.pipes.drawPipes();
 		// Restart the onFrame loop
 		this.lastFrame = +new Date() / 1000;
 		window.requestAnimationFrame(this.onFrame);
