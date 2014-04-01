@@ -7,7 +7,7 @@ window.Player = (function() {
 	// for 1024x576px canvas.
 	//var SPEED = 20; // * 10 pixels per second
 	var GRAVITY = 170;
-	var JUMP_VELOCITY = 50;
+	var JUMP_VELOCITY = 30;
 	//var WIDTH = 5;
 	var HEIGHT = 5;
 	var INITIAL_POSITION_X = 15;

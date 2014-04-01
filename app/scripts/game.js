@@ -46,13 +46,13 @@ window.Game = (function() {
 	 */
 	Game.prototype.start = function() {
 		this.reset();
-		var bottomHeight = Math.floor(Math.random() * (400 - 300)) + 300;
-		var upperHeight = bottomHeight - 300;
+		var bottomHeight = Math.floor(Math.random() * (320 - 90)) + 90;
+		//var upperHeight = -bottomHeight + 100;
 		console.log(bottomHeight);
-		var pipeBelow = $('<div class="pipe_lower" style="margin-top:' + bottomHeight + 'px;">></div>');
-		var pipeAbove = $('<div class="pipe_upper" style="margin-top:' + upperHeight + 'px;"></div>');
+		var pipeBelow = $('<div class="pipe_lower" style="height:' + bottomHeight + 'px;">></div>');
+		//var pipeAbove = $('<div class="pipe_upper" style="height:' + upperHeight + 'px;"></div>');
 		$('.pipes').append(pipeBelow);
-		$('.pipes').append(pipeAbove);
+		//$('.pipes').append(pipeAbove);
 
 		// Restart the onFrame loop
 		this.lastFrame = +new Date() / 1000;

@@ -36,8 +36,8 @@
 
 @keyframes scrolling
 {
-	from {left:0px; top:0px;}
-	to {left: -50px;}
+	from { transform: translate3d(0, 0, 0); }
+	to { transform: translate3d(-50px, 0, 0); }
 }
 
 .Ground-static {
@@ -78,15 +78,15 @@
 
 @keyframes cloud-scrolling
 {
-	from {left:500px; top:3px;}
-	to {left: -300px; top: 70px;}
+	from { transform: translate3d(500px, -3px, 0); }
+	to { transform: translate3d(-300px, 70px, 0); }
 }
 
 .pipe_upper {
 	position: absolute;
 	background-image: url('../images/pipe-above.PNG');
 	width: em(52px);
-	height: em(320px);
+	/*height: em(320px);*/
 	/*margin-top: em(-200px);*/
 	animation: scrolling-pipe 10s linear infinite running;
 }
@@ -95,13 +95,13 @@
 	position: absolute;
 	background-image: url('../images/pipe-below.PNG');
 	width: em(52px);
-	height: em(320px);
+	/*height: em(320px);*/
 	/*margin-top: em(200px);*/
 	animation: scrolling-pipe 10s linear infinite running;
 }
 
 @keyframes scrolling-pipe
 {
-	from {left:500px;}
-	to {left: -500px;}
+	from { transform: translate3d(500px, 0, 0); }
+	to { transform: translate3d(-500px, 0, 0); }
 }
