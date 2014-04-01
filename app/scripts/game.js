@@ -10,6 +10,7 @@ window.Game = (function() {
 	var Game = function(el) {
 		this.el = el;
 		this.player = new window.Player(this.el.find('.Player'), this);
+		this.pipes = new window.Pipes(this.el.find('.Pipes'), this);
 		this.isPlaying = false;
 
 		// Cache a bound onFrame since we need it each frame.
@@ -32,10 +33,9 @@ window.Game = (function() {
 		this.lastFrame = now;
 
 
-		//var newpipe = $('<div class="pipes-animated"><div class="pipe_upper" style="height: ' + 100 + 'px;"></div><div class="pipe_lower" style="height: ' + 200 + 'px;"></div></div>');
-		//$('.pipes').append(newpipe);
 		// Update game entities.
 		this.player.onFrame(delta);
+		//this.pipes.onFrame();
 
 		// Request next frame.
 		window.requestAnimationFrame(this.onFrame);
@@ -46,13 +46,10 @@ window.Game = (function() {
 	 */
 	Game.prototype.start = function() {
 		this.reset();
-		var bottomHeight = Math.floor(Math.random() * (320 - 90)) + 90;
-		//var upperHeight = -bottomHeight + 100;
-		console.log(bottomHeight);
-		var pipeBelow = $('<div class="pipe_lower" style="height:' + bottomHeight + 'px;">></div>');
-		//var pipeAbove = $('<div class="pipe_upper" style="height:' + upperHeight + 'px;"></div>');
-		$('.pipes').append(pipeBelow);
-		//$('.pipes').append(pipeAbove);
+		
+		// TEMPORARY
+		this.pipes.onFrame();
+		// TEMPORARY
 
 		// Restart the onFrame loop
 		this.lastFrame = +new Date() / 1000;
