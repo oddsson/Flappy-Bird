@@ -10,7 +10,7 @@ This game project has the following:
 * Randomly generated pipes to jump through.
 * An awesome song with controls.
 * Everything is hardware accelerated.
-* ~~Collision with the pipes~~
+* Collision with the pipes
 * ~~Point counter~~
 
 ## Setup
