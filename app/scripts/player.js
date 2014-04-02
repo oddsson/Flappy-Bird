@@ -49,6 +49,18 @@ window.Player = (function() {
 		if (this.pos.y + HEIGHT > this.game.WORLD_HEIGHT) {
 			return this.game.gameover();
 		}
+		var lower = $('.pipe_lower').overlaps('.Player');
+		var upper = $('.pipe_upper').overlaps('.Player');
+		if(typeof lower[0] !== 'undefined'){
+			//console.log(test[0]);
+			return this.game.gameover();
+		}
+
+		if(typeof upper[0] !== 'undefined'){
+			//console.log(test[0]);
+			return this.game.gameover();
+		}
+
 	};
 	return Player;
 })();

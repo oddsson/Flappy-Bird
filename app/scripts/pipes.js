@@ -6,7 +6,7 @@ window.Pipes = (function() {
 		this.game = game;
 	};
 
-	/*Pipes.prototype.onFrame = function() {
+	/*Pipes.prototype.onFrame = function(delta) {
 
 	};*/
 
