@@ -32,7 +32,6 @@ window.Game = (function() {
 		this.lastFrame = now;
 		// Update game entities.
 		this.player.onFrame(delta);
-		//this.pipes.onFrame(delta);
 		// Request next frame.
 		window.requestAnimationFrame(this.onFrame);
 	};

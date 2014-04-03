@@ -46,9 +46,12 @@ window.Player = (function() {
 	};
 
 	Player.prototype.checkCollisionWithBounds = function() {
+		// Check the ground.
 		if (this.pos.y + HEIGHT > this.game.WORLD_HEIGHT) {
 			return this.game.gameover();
 		}
+
+		// Check the pipes.
 		var lower = $('.pipe_lower').overlaps('.Player');
 		var upper = $('.pipe_upper').overlaps('.Player');
 		if(typeof lower[0] !== 'undefined'){
